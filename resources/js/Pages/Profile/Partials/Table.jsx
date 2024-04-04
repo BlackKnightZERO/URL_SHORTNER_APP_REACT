@@ -14,7 +14,7 @@ export default function Table({ urls }) {
                 <tbody>
                     {
                         urls.map((item, idx) => (
-                            <tr className="border-b dark:border-neutral-500">
+                            <tr className="border-b dark:border-neutral-500" key={item.id}>
                                 <td className="whitespace-nowrap px-6 py-4 font-medium">{ idx + 1 }</td>
                                 <td className="whitespace-nowrap px-6 py-4">{ item.long_url }</td>
                                 <td className="whitespace-nowrap px-6 py-4">{ item.short_url }</td>
