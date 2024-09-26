@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 use App\Models\Url;
+use App\Interfaces\UrlRepositoryInterface;
 
 class UrlRepository implements UrlRepositoryInterface {
 
@@ -15,7 +16,7 @@ class UrlRepository implements UrlRepositoryInterface {
             $long_url = rtrim($long_url, '/');
         }
         return URL::firstOrCreate(
-            ['long_url' => $long_url],
+            ['long_url' => $long_url, 'user_id' => auth()->user()->id],
             ['short_url' => $this->generateShortURL(), 'visit_count' => 1, 'user_id' => auth()->user()->id ],
         );
     }
@@ -34,7 +35,7 @@ class UrlRepository implements UrlRepositoryInterface {
         
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $shortURL = '';
-        $length = 6;
+        $length = config('app.short_url_length');
 
         for ($i = 0; $i < $length; $i++) {
             $index = rand(0, strlen($characters) - 1);

@@ -212,4 +212,6 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'short_url_length' => env('SHORT_URL_LENGTH', 6)
+
 ];

@@ -47,7 +47,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                         </svg>
                     </div>
 
-                    <div className="mt-16">
+                    {/* <div className="mt-16">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                             <a
                                 href="https://laravel.com/docs"
@@ -296,7 +296,14 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                         <div className="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-end sm:ms-0">
                             Laravel v{laravelVersion} (PHP v{phpVersion})
                         </div>
+                    </div> */}
+
+                <section class="bg-white rounded-xl dark:bg-gray-900 mt-4">
+                    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+                        <h1 class="mb-4 text-xl font-semibold text-gray-600">URL SHORTNER APP</h1>
+                        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Manage your urls, track visits !</p>
                     </div>
+                </section>
                 </div>
             </div>
 

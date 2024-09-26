@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Repositories\UrlRepositoryInterface;
+use App\Interfaces\UrlRepositoryInterface;
 
 class UrlService {
     public function __construct(protected UrlRepositoryInterface $urlRepository) {
